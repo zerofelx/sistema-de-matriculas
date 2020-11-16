@@ -42,6 +42,16 @@ function WriteWordTest($client_full_name, $client_document) {
         $error_message = "Error creando el documento";
         var_dump($exc);
     }
-    header("Location: /docs/results_/".$filename);
+    ConvertToPDF();
+    // header("Location: /docs/results_/".$filename);
+}
+
+
+
+function ConvertToPDF() {
+    $ultima_linea = system('libreoffice', $retval);
+    echo '
+    <hr />Ultima linea de la salida: ' . $ultima_linea . '
+    <hr />Valor de retorno: ' . $retval;
 }
 ?>
