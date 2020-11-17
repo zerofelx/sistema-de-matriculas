@@ -1,0 +1,1 @@
+soffice --headless --convert-to pdf --outdir /var/www/html/docs/pdfs /var/www/html/docs/results_/results_543162.docx
